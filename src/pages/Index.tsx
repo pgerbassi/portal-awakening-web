@@ -1,13 +1,31 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React from 'react';
+import { Hero } from '../components/Hero';
+import { AboutSection } from '../components/AboutSection';
+import { BenefitsSection } from '../components/BenefitsSection';
+import { ModulesSection } from '../components/ModulesSection';
+import { TestimonialsSection } from '../components/TestimonialsSection';
+import { OfferSection } from '../components/OfferSection';
+import { Footer } from '../components/Footer';
+import { BackToTop } from '../components/BackToTop';
+
+// Importação do Framer Motion
+import { MotionConfig } from 'framer-motion';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <MotionConfig reducedMotion="user">
+      <div className="overflow-x-hidden">
+        <Hero />
+        <AboutSection />
+        <BenefitsSection />
+        <ModulesSection />
+        <TestimonialsSection />
+        <OfferSection />
+        <Footer />
+        <BackToTop />
       </div>
-    </div>
+    </MotionConfig>
   );
 };
 

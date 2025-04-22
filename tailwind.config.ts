@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,17 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				portal: {
+					black: '#0A0A0A',
+					gold: '#D4AF37',
+					goldLight: '#F0E68C',
+					goldDark: '#B8860B'
 				}
+			},
+			fontFamily: {
+				serif: ['Cinzel', 'serif'],
+				sans: ['Montserrat', 'sans-serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +95,36 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-gold': {
+					'0%, 100%': { 
+						opacity: 1,
+						boxShadow: '0 0 20px 10px rgba(212, 175, 55, 0.2)' 
+					},
+					'50%': { 
+						opacity: 0.8,
+						boxShadow: '0 0 30px 15px rgba(212, 175, 55, 0.4)' 
+					}
+				},
+				'slow-spin': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-gold': 'pulse-gold 3s infinite ease-in-out',
+				'slow-spin': 'slow-spin 20s linear infinite',
+				'float': 'float 6s ease-in-out infinite'
+			},
+			backgroundImage: {
+				'stars': 'url("/stars-bg.png")',
+				'gold-gradient': 'linear-gradient(to right, #B8860B, #D4AF37, #F0E68C, #D4AF37, #B8860B)'
 			}
 		}
 	},
